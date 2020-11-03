@@ -15,7 +15,6 @@
           QGames App
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -40,8 +39,14 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container>
-      <router-view />
+    <q-page-container class="q-pa-md">
+      <div class="row">
+        <div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+          <router-view />
+        </div>
+        <div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+      </div>
     </q-page-container>
   </q-layout>
 </template>
@@ -51,46 +56,10 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksData = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
+    title: 'Inicio',
+    caption: 'Pagina de inicio',
     icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    link: '/#/'
   },
   {
     title: 'Info',
@@ -102,7 +71,13 @@ const linksData = [
     title: 'Contacto',
     caption: 'Pagina de contacto',
     icon: 'favorite',
-    link: '/#/contacto'
+    link: '/#/info/contacto'
+  },
+  {
+    title: 'Juegos',
+    caption: 'Pagina de juegos',
+    icon: 'games',
+    link: '/#/games'
   }
 ]
 
