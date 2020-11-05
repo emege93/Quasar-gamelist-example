@@ -26,7 +26,8 @@ const routes = [
     path: '/games',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', name: 'games', component: () => import('pages/games/gamesIndex.vue') }
+      { path: '', name: 'gamesIndex', component: () => import('pages/games/gamesIndex.vue') },
+      { path: 'view/:id', props: true, name: 'gamesView', component: () => import('pages/games/gamesView.vue') }
     ]
   },
 
